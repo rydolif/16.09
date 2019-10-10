@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>OptimizedHTML 5</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/@1x/preview.jpg">
+	
+	<link rel="stylesheet" href="css/styles.min.css?v=1">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+		
+			<a href="index.html" class="header__logo">
+				<img 
+					src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+					data-src="img/@1x/hero.jpg"
+					data-srcset="" 
+					alt="logo">
+			</a>
+
+			<button class="hamburger" type="button">
+				<span class="hamburger__box">
+					<span class="hamburger__item"></span>
+				</span>
+			</button>
+
+			<nav class="nav">
+				<ul>
+					<li><a href="index.html" class="order_open">Головна</a></li>
+					<li><a href="catalog.html">Наші послуги</a></li>
+					<li><a href="about.html">Виконанні роботи</a></li>
+					<li><a href="contacts.html">Контакти</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+
+
+	<!-- Custom HTML / Remove before use -->
+
+	<div class="hero lazy-background" data-bg="img/@1x/hero.jpg">
+		<div class="container">
+
+			<h1>Заголовок</h1>
+
+			<img class="lazy img-responsive example-img"
+				src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+				data-src="img/@1x/hero.jpg"
+				data-srcset="img/@1x/hero.jpg 1x, img/@2x/hero.jpg 2x"
+				alt="Start HTML5 Template">
+
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer__container container">
+			
+		</div>
+	</footer>
+
+	<div class="modal" id="order">
+
+		<button class="modal__close order_close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+
+		<form action="sendmail.php" class="form" method="post">
+			<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+			<input type="hidden" name="subject" value="Узнать подробнее!">
+
+			<div class="form__line">
+				<input type="text" name="name" placeholder="Имя" required>
+			</div>
+			<div class="form__line">
+				<input type="tel" name="phone" placeholder="Телефон" required>
+			</div>
+			<div class="form__line">
+				<button type="submit" class="btn" name="submit">Отправить</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="modal" id="thanks">
+		<button class="modal__close thanks_close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<h3>Спасибо за доверие!</h3>
+		<p>Мы обязательно с вами свяжемся!</p>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

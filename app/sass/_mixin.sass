@@ -1,0 +1,21 @@
+// ------ margin: 0 auto ------ @include auto
+@mixin auto
+	margin:
+		left: auto
+		right: auto
+
+
+// ------ after before ------ @include pseudo
+@mixin pseudo($display: block, $pos: absolute, $content: '')
+	content: $content
+	display: $display
+	position: $pos
+
+
+// ------ container ------ @include container
+$grid-breakpoints: (xs: $xs, sm: $sm, md: $md, lg: $lg, xl: $xl, xxl: $xxl)
+
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) 
+	$next: breakpoint-next($name, $breakpoints)
+	@return if($next, breakpoint-min($next, $breakpoints) - .02, null)
+

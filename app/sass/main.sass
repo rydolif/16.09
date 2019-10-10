@@ -1,0 +1,46 @@
+@import 'vars'
+@import 'mixin'
+@import 'fonts'
+@import 'libs'
+@import 'parts'
+
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 700
+	line-height: 1.2
+
+h1
+	color: #fff
+	font-size: 62px
+
+input, textarea
+	border: #000 1px solid
+	border-radius: 0
+	color: #000
+
+input
+	height: 50px
+	line-height: 50px
+	padding: 0 15px
+
+	&::placeholder
+		line-height: 50px
+
+textarea
+	height: 100px
+	padding: 15px
+	
+	&::placeholder
+		line-height: 1.4
+
+
+.hero
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+	background-repeat: no-repeat
+	background-size: cover
+
+
+	h1
+		&::before,
+		&::after
+			@include pseudo
