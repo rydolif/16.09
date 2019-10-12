@@ -444,6 +444,7 @@ textarea
 	&__item
 		width: 18%
 		text-align: center
+		z-index: 11
 
 
 .geography
@@ -620,6 +621,7 @@ textarea
 			right: 0
 			top: 0
 			height: 100%
+			width: 50%
 
 		&__form
 			background-color: $text
@@ -989,7 +991,6 @@ textarea
 				&:focus
 					animation: hover .3s linear 1 forwards
 
-
 	&--position
 		text-align: left
 
@@ -1025,8 +1026,7 @@ textarea
 			display: flex
 			flex-direction: column
 			width: 30%
-
-				
+		
 	&--call
 		position: relative
 		background-size: cover
@@ -1425,6 +1425,9 @@ textarea
 			align-items: center
 			margin-bottom: 40px
 
+			&:last-child
+				margin-bottom: 0
+
 		img
 			margin-right: 50px
 
@@ -1435,7 +1438,103 @@ textarea
 		margin-bottom: 80px
 
 
-.products
+.product
+	background-color: $white
+	overflow: hidden
+	z-index: 1
+	
+	&--hero
+		position: relative
+		padding: 150px 0
+		z-index: 1
+		overflow: visible
+		
+		&::before
+			@include pseudo
+			right: 0
+			top: 50%
+			width: 730px
+			height: 730px
+			background-color: $border
+			border-radius: 50%
+			z-index: 1
+
+		&::after
+			@include pseudo
+			top: 30%
+			left: 50%
+			height: 230px
+			width: 100%
+			background-image: url(../img/product--hero-before.png)
+			background-repeat: no-repeat
+			background-size: cover
+			z-index: 2
+
+		h1
+			margin-bottom: 20px
+			color: $text
+			font-size: 44px
+
+		p
+			font-size: 20px
+			text-transform: uppercase
+	
+	&--catalog
+
+		h2
+			margin-bottom: 0
+
+		&__wrap
+			background-color: #fff
+			padding: 55px 100px 30px
+
+		&__item
+			position: relative
+			margin-bottom: 25px
+			display: flex
+			align-items: center
+			padding-right: 80px
+			transition: all .6s
+			border-radius: 10px
+
+			&:last-child
+				margin-bottom: 0
+
+			&:hover,
+			&:focus
+				background-color: $border
+
+			img
+				border-radius: 10px
+				max-width: 260px
+				width: 100%
+				height: auto
+				margin-right: 40px
+
+			&_arrow
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translate(0, -50%)
+				display: block
+				width: 50px
+				height: 50px
+				border-radius: 50%
+				background-color: $accent
+
+				&::before
+					@include pseudo
+					left: 50%
+					top: 50%
+					transform: translate(-65%, -50%) rotate(45deg)
+					width: 16px
+					height: 16px
+					border-top: 2px solid $white
+					border-right: 2px solid $white
+	
+	&--tabs
+		margin-bottom: 80px
+		z-index: 2
 
 
 @import "media"

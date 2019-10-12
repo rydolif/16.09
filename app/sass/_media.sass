@@ -1,5 +1,9 @@
 
 @media only screen and (max-width : 1200px)
+	.product--hero::before
+		width: 400px
+		height: 400px
+
 	.about
 		&--content
 			padding: 50px 0
@@ -165,6 +169,7 @@
 
 
 @media only screen and (max-width : 992px)
+
 	.about
 		&--hero
 			img
@@ -260,7 +265,7 @@
 	.page
 		&__margin
 			margin-bottom: 30px
-			
+
 		&--hero
 			padding-top: 60px
 
@@ -323,10 +328,27 @@
 		&__list
 			li
 				justify-content: center
+				margin-bottom: 20px
+
+				&:last-child
+					margin-bottom: 20px
 
 			img
 				margin-right: 20px
 
+	.product
+		&--hero
+			padding: 100px 0
+
+			&::before
+				display: none
+
+		&--catalog__wrap
+			padding: 30px
+
+		&--tabs
+			margin-bottom: 30px	
+			
 
 	.map
 		iframe
@@ -659,6 +681,27 @@
 
 			h1
 				margin-bottom: 40px
+	
+	.product
+		&--hero
+			padding: 80px 0
+
+			h1
+				margin-bottom: 15px
+
+			p
+				font-size: 16px
+
+		&--catalog
+			&__wrap
+				padding: 15px
+
+				img
+					margin-right: 15px
+					max-width: 180px
+
+			&__item
+				padding-right: 60px
 
 	h1
 		font-size: 40px !important
@@ -862,7 +905,6 @@
 			padding: 30px 0
 			font-size: 12px
 
-
 	.about
 		&--hero h1
 			margin-bottom: 120px
@@ -902,6 +944,25 @@
 
 			&__form
 				width: 100%
+	
+	.product
+		&--catalog__item
+			flex-wrap: wrap
+			padding-right: 0
+
+			span
+				right: auto
+				left: 50%
+				top: 40%
+				transform: translate(-50%, -50%)
+
+			img
+				min-width: 100%
+				margin-right: 0
+
+			p
+				padding: 15px
+
 
 	h1
 		font-size: 32px !important
