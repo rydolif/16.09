@@ -1,5 +1,10 @@
 
 @media only screen and (max-width : 1200px)
+	.jobs
+		&__item
+			height: 240px
+			font-size: 18px
+
 	.product--hero::before
 		width: 400px
 		height: 400px
@@ -169,6 +174,17 @@
 
 
 @media only screen and (max-width : 992px)
+	.jobs
+		padding-bottom: 40px
+
+		&__list
+			justify-content: space-around
+
+		&__item
+			width: 48%
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
 
 	.about
 		&--hero
@@ -297,6 +313,9 @@
 
 			p
 				margin-bottom: 15px
+
+			br
+				display: none
 		
 		&--info
 			span
@@ -337,8 +356,11 @@
 				margin-right: 20px
 
 	.product
+		&--grums
+			margin-bottom: 90px
+
 		&--hero
-			padding: 100px 0
+			padding-bottom: 100px
 
 			&::before
 				display: none
@@ -683,8 +705,11 @@
 				margin-bottom: 40px
 	
 	.product
+		&--grums
+			margin-bottom: 60px
+
 		&--hero
-			padding: 80px 0
+			padding-bottom: 80px
 
 			h1
 				margin-bottom: 15px
@@ -756,6 +781,11 @@
 
 
 @media only screen and (max-width : 576px)
+	.jobs
+		&__item
+			width: 100%
+			height: 200px
+
 	.page
 		&__decor::before
 			transform: translate(0, -5px)

@@ -621,7 +621,7 @@ textarea
 			right: 0
 			top: 0
 			height: 100%
-			width: 50%
+			width: 48%
 
 		&__form
 			background-color: $text
@@ -1363,6 +1363,7 @@ textarea
 			&:last-child
 				margin-bottom: 0
 
+
 	&--white
 		background-color: #fff
 		color: $text
@@ -1401,7 +1402,10 @@ textarea
 
 			img
 				border-radius: 0
-
+	
+	&--text
+		background-color: $text
+		
 	&__decor
 		position: relative
 		z-index: 1
@@ -1442,10 +1446,14 @@ textarea
 	background-color: $white
 	overflow: hidden
 	z-index: 1
+
+	&--grums
+		margin-bottom: 140px
 	
 	&--hero
 		position: relative
-		padding: 150px 0
+		padding-bottom: 150px
+		padding-top: 0 !important
 		z-index: 1
 		overflow: visible
 		
@@ -1535,6 +1543,36 @@ textarea
 	&--tabs
 		margin-bottom: 80px
 		z-index: 2
+
+
+.jobs
+	padding-bottom: 80px
+
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 31%
+		background-color: $green
+		padding: 10px
+		border-radius: 10px
+		z-index: 2
+		text-transform: uppercase
+		color: $white
+		font-size: 20px
+		font-weight: 700
+		text-align: center
+		height: 350px
+
+		&:hover,
+		&:focus
+			color: $white
+
 
 
 @import "media"
