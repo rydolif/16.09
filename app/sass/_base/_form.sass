@@ -1,0 +1,77 @@
+.form
+	div
+		position: relative
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+
+	label
+		display: block
+		position: relative
+		padding-left: 40px
+		cursor: pointer
+		margin-bottom: 0
+		margin-right: 0
+		font-size: 10px
+		line-height: 1.2
+		
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			transition: all .6s
+
+		&::before
+			width: 20px
+			height: 20px
+			border: 1px solid $text
+
+		&::after
+			width: 8px
+			height: 16px
+			border-bottom: 3px solid $accent
+			border-right: 3px solid $accent
+			border-radius: 4px
+			left: 6px
+			top: 0
+			
+	input[type="checkbox"]
+		display: none
+
+	input[type="checkbox"]:checked + label::after
+		transform: scale(1) rotate(45deg)
+
+	input[type="checkbox"] + label::after
+		transform: scale(0) rotate(45deg)
+
+	label.error
+		position: absolute
+		bottom: -15px
+		right: 0
+		left: 0
+		width: 90%
+		margin: 0 auto
+		transition: all .6s
+		animation: error .3s linear 1 forwards
+		color: $white
+		text-align: center
+		font-weight: 600
+		background-color: red
+		border-radius: 10px
+		font-size: 12px
+		padding: 2px
+		
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			bottom: 100%
+			transform: translate(-50%, 0)
+			border-bottom: 5px solid red
+			border-left: 10px solid transparent
+			border-right: 10px solid transparent
+			border-top: 5px solid transparent
+
+		&::after
+			display: none

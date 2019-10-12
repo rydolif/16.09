@@ -1,0 +1,46 @@
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 9999
+	background-color: #fff
+
+.pulse
+	position: relative
+	left: 50%
+	top: 50vh
+	margin: -40px 0 0 -40px
+
+.pulse::before, .pulse::after
+	content: ''
+	border: 5px solid $accent
+	height: 80px
+	width: 80px
+	border-radius: 50%
+	position: absolute
+
+.pulse::before
+	animation: pulse-outer .8s ease-in infinite
+
+.pulse::after
+	animation: pulse-inner .8s ease-in infinite
+
+
+@keyframes pulse-outer
+		0%
+			opacity: .1
+		50%
+			opacity: .5
+		100%
+			opacity: 0
+
+
+@keyframes pulse-inner
+		0%
+			opacity: 1
+			transform: scale(0)
+		100%
+			opacity: 0
+			transform: scale(1)

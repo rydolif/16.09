@@ -1,0 +1,88 @@
+@import "fonts"
+
+// --------------- color ---------------
+$white: #F7F7F7
+$black: #000
+$green: #27646A
+$border: #E6E6E6
+
+$accent: #FA7920
+$text: #3E3E3E
+
+// --------------- fonts ---------------
+$fonts: 'OpenSans', sans-serif
+
+
+::placeholder
+	color: rgba($text, .5)
+
+::selection
+	background-color: $accent
+	color: $white
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	font-family: $fonts
+	font-size: 14px
+	color: $text
+	line-height: 1.2
+	font-weight: 400
+	margin: 0
+
+p, ul
+  padding: 0
+  margin: 0
+
+a
+  text-decoration: none
+  background-color: transparent
+  
+input, textarea, button, a
+	outline: none
+
+input, textarea
+	transition: all .6s
+	// -webkit-appearance: none //radio+checkbox
+
+	&:focus:required:invalid
+		border-color: red
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: green
+		box-shadow: none
+		-webkit-appearance: none
+
+
+textarea
+	resize: none
+
+ul
+	list-style-type: none
+
+
+// ------ margin: 0 auto ------ @include auto
+@mixin auto
+	margin:
+		left: auto
+		right: auto
+
+
+// ------ after before ------ @include pseudo
+@mixin pseudo($display: block, $pos: absolute, $content: '')
+	content: $content
+	display: $display
+	position: $pos
+
+
+
+
+@import "_base/preloader"
+@import "_base/animation"
+@import "_base/btn"
+@import "_base/form"
+@import "_base/modal"
+@import "_base/hamburger"

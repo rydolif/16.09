@@ -1,0 +1,91 @@
+.modal
+	position: relative
+	z-index: 1
+	transform: scale(0.8)
+
+	h3
+		width: 100%
+		text-transform: uppercase
+		font-size: 20px
+		margin-bottom: 15px
+		font-weight: 400
+
+	p, ol
+		font-size: 15px
+		font-weight: 700
+
+	ol
+		padding-left: 15px
+
+	li, p
+		margin-bottom: 20px
+
+	.btn
+		width: 100%
+
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 100%
+		max-width: 1170px
+		height: auto
+		padding: 50px
+		background-color: $white
+
+	&__close
+		position: absolute
+		right: -13px
+		top: -13px
+		display: block
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.33)
+		width: 48px
+		height: 48px
+		background-color: #c4c4c4
+		border-radius: 50%
+		border: none
+		cursor: pointer
+		transition: all .6s
+
+		&:hover, &:focus
+			outline: none
+			transform: rotate(90deg)
+
+			span
+				background-color: red
+
+		span
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			background: $white
+			transition: all .6s
+			border-radius: 4px
+			height: 22px
+			width: 4px
+
+			&:first-child
+				transform: translate(-50%, -50%) rotate(45deg)
+
+			&:last-child
+				transform: translate(-50%, -50%) rotate(-45deg)
+	
+	&__form
+		width: 48%
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+		&_line
+			position: relative
+			width: 48%
+
+		&_textarea
+			width: 100%
+
+	&__content
+		width: 48%
+
+.popup_visible .modal
+	transform: scale(1)

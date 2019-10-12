@@ -1,0 +1,47 @@
+.btn
+	position: relative
+	display: inline-block
+	height: 50px
+	border: none
+	outline: none
+	padding: 0 10px
+	border-radius: 0
+	text-align: center
+	text-transform: uppercase
+	font-size: 17px
+	color: $white
+	line-height: 50px
+	letter-spacing: .2px
+	transition: all .6s
+
+	&:hover,
+	&:focus
+		outline: none
+		border: none
+		text-decoration: none
+		cursor: pointer
+		color: $white
+
+	img
+		margin-right: 15px	
+
+	&--green
+		background-color: $green
+
+		&:hover,
+		&:focus
+			box-shadow: 0 0 20px rgba($green, 1)
+
+	&--accent
+		background-color: $accent
+
+		&:hover,
+		&:focus
+			box-shadow: 0 0 20px rgba($accent, 1)
+
+	&--text
+		background-color: $text
+
+		&:hover,
+		&:focus
+			box-shadow: 0 0 20px rgba($text, 1)
