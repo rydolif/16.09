@@ -1,5 +1,26 @@
 
 @media only screen and (max-width : 1200px)
+	.about
+		&--content
+			padding: 50px 0
+
+			h3
+				br
+					display: none
+
+		&--catalog
+			padding-bottom: 40px
+
+			&__content
+				width: 100%
+
+		&--supply
+			h3
+				margin-bottom: 40px
+
+		&--text-before
+			padding: 0
+
 	.map
 		iframe
 			height: 400px
@@ -144,7 +165,70 @@
 
 
 @media only screen and (max-width : 992px)
-	.page
+	.about
+		&--hero
+			img
+				width: 80%
+				right: 0
+				left: auto
+				bottom: 0
+				top: 0
+
+			br
+				display: none
+
+		&--content
+			span
+				margin: 10px auto
+
+			h3
+				margin-bottom: 30px
+
+			&__list
+				justify-content: space-around
+
+			&__item
+				margin-bottom: 15px
+				width: 45%
+
+				br
+					display: none
+
+			&__img
+				width: 100px
+				height: 100px
+				
+				img
+					height: 60%
+
+		&--catalog__content
+			&_text
+				width: 50%
+				padding: 20px 30px 20px 20px
+
+
+				h3
+					margin-bottom: 20px
+					font-size: 18px
+
+				br
+					display: none
+
+
+			&_img
+				width: 55%
+
+		&--text-before
+			.container
+				padding:
+					top: 40px
+					bottom: 40px
+
+		&--supply__item
+			width: 48% !important
+
+
+	.contacts
 		&--contacts
 			&__container
 				padding-top: 100px
@@ -451,7 +535,7 @@
 
 
 @media only screen and (max-width : 767px)
-	.page
+	.contacts
 		&--hero
 			padding-top: 80px
 
@@ -504,7 +588,7 @@
 				width: 90%
 
 	h1
-		font-size: 40px
+		font-size: 40px !important
 
 	.modal
 		margin:
@@ -556,9 +640,40 @@
 
 
 @media only screen and (max-width : 576px)
+	.about
+		&--hero
+			h1
+				margin-bottom: 160px
+
+		&--content
+			padding: 30px 0
+
+		&--text
+			padding: 30px 0
+
+			&-before
+				padding: 0
+
+		&--catalog__content
+			margin-bottom: 20px
+
+			&_img
+				display: none
+
+			&_text
+				width: 100%
+				text-align: center
+				padding: 15px
+					
+				h3
+					margin-bottom: 10px
+
+				br
+					display: none
+
 	h1
-		font-size: 36px
-		letter-spacing: .2px
+		font-size: 36px !important
+		letter-spacing: .2px !important
 
 		br
 			display: none
@@ -636,11 +751,33 @@
 
 
 @media only screen and (max-width : 480px)
-	.page
+	.about
+		&--hero h1
+			margin-bottom: 120px
+
+		&--supply__item
+			width: 100% !important
+			margin-bottom: 30px
+
+			&::before
+				width: 40px
+				height: 40px
+
+			&:last-child
+				margin-bottom: 0
+
+		&--text-before
+			p
+				margin-bottom: 15px
+
+				&:last-child
+					margin-bottom: 0
+
+	.contacts
 		&--contacts
 			&__container
 				padding-top: 40px
-				
+
 		&--position
 			&__item
 				a
@@ -655,10 +792,13 @@
 				width: 100%
 
 	h1
-		font-size: 32px
+		font-size: 32px !important
 
 	h2
 		font-size: 26px
+
+	h3
+		font-size: 16px !important
 
 	input,
 	.btn
