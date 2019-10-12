@@ -1255,5 +1255,162 @@ textarea
 				width: 26%
 
 
+.page
+	&--hero
+		position: relative
+		padding-bottom: 40px
+		padding-top: 90px
+		overflow: hidden
+		
+		&::after
+			@include pseudo
+			top: 0
+			left: 50%
+			height: 230px
+			width: 100%
+			background-image: url(../img/line.png)
+			background-repeat: no-repeat
+			background-size: cover
+			z-index: -1
+
+		h1
+			margin-bottom: 80px
+
+		img
+			display: block
+			max-width: 100%
+			margin: 0 auto
+			border-radius: 10px
+
+	&--denefits
+		position: relative
+		padding-top: 40px
+		padding-bottom: 80px
+
+		&::after
+			@include pseudo
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			height: 230px
+			width: 100%
+			background-image: url(../img/line.png)
+			background-repeat: no-repeat
+			background-size: cover
+			z-index: -1
+
+		h2
+			margin-bottom: 20px
+
+		h3
+			text-align: center
+			margin-bottom: 60px
+			
+
+		&__list
+			display: flex
+			justify-content: space-around
+			flex-wrap: wrap
+			width: 95%
+			margin: 0 auto
+
+		&__item
+			line-height: 1.4
+			font-weight: 700
+			text-align: center
+			width: 21%
+			margin-bottom: 15px
+
+		&__img
+			position: relative
+			width: 160px
+			height: 160px
+			background-color: $border
+			border-radius: 50%
+			margin: 0 auto 15px
+
+			img
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+	
+	&--accent,
+	&--green,
+	&--white,
+	&--info
+		padding: 80px 0
+		background-color: $accent
+		color: $white
+		font-size: 15px
+		font-weight: 700
+		line-height: 1.4
+
+		p
+			margin-bottom: 30px
+
+			&:last-child
+				margin-bottom: 0
+				
+	&--green
+		background-color: $green
+
+	&--white
+		background-color: #fff
+		color: $text
+
+
+
+	&--info
+		background-color: $text
+
+		h3
+			text-align: center
+			margin-bottom: 70px
+
+		img
+			border-radius: 50%
+			
+		span
+			display: block
+			height: 1px
+			width: 160px
+			background-color: $border
+			margin: 20px auto
+
+		&__list
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+		&__item
+			width: 18%
+			text-align: center
+
+	&__decor
+		position: relative
+		z-index: 1
+		
+		&::before
+			@include pseudo
+			top: 0
+			transform: translate(-50%, -5px)
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			border: 5px solid $accent
+			box-shadow: 0 0 20px rgba($accent, 1)
+			z-index: -1
+
+	&__list
+
+		li
+			display: flex
+			align-items: center
+			margin-bottom: 40px
+
+		img
+			margin-right: 50px
+
 	
 @import "media"
