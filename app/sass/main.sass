@@ -1285,7 +1285,10 @@ textarea
 	&--denefits
 		position: relative
 		padding-top: 40px
-		padding-bottom: 80px
+		padding-bottom: 20px
+		line-height: 1.4
+		font-weight: 700
+		font-size: 15px
 
 		&::after
 			@include pseudo
@@ -1305,21 +1308,29 @@ textarea
 		h3
 			text-align: center
 			margin-bottom: 60px
-			
 
+		h4
+			font-size: 20px
+			margin-bottom: 5px
+			font-weight: 400
+			text-transform: uppercase
+			
 		&__list
 			display: flex
 			justify-content: space-around
 			flex-wrap: wrap
 			width: 95%
-			margin: 0 auto
+			margin: 0 auto 60px
 
 		&__item
-			line-height: 1.4
-			font-weight: 700
 			text-align: center
-			width: 21%
+			width: 22%
 			margin-bottom: 15px
+
+			&_min
+				font-size: 10px
+				font-weight: 400
+				margin-top: 5px
 
 		&__img
 			position: relative
@@ -1351,15 +1362,10 @@ textarea
 
 			&:last-child
 				margin-bottom: 0
-				
-	&--green
-		background-color: $green
 
 	&--white
 		background-color: #fff
 		color: $text
-
-
 
 	&--info
 		background-color: $text
@@ -1387,9 +1393,19 @@ textarea
 			width: 18%
 			text-align: center
 
+	&--green
+		background-color: $green
+
+		&__img
+			background-color: $white
+
+			img
+				border-radius: 0
+
 	&__decor
 		position: relative
 		z-index: 1
+		text-align: left
 		
 		&::before
 			@include pseudo
@@ -1412,5 +1428,14 @@ textarea
 		img
 			margin-right: 50px
 
-	
+	&__center
+		text-align: center
+
+	&__margin
+		margin-bottom: 80px
+
+
+.products
+
+
 @import "media"
