@@ -34,7 +34,7 @@
 		iframe
 			height: 400px
 
-	h1
+	h1, .title
 		font-size: 50px
 
 	h2
@@ -103,8 +103,13 @@
 			padding: 30px
 
 	.client
-		h3
+		p
 			margin-bottom: 20px
+
+		&__title
+			p
+				font-size: 36px
+				margin-bottom: 20px
 
 		&__trust
 			width: 85%
@@ -232,7 +237,7 @@
 				padding: 20px 30px 20px 20px
 
 
-				h3
+				p
 					margin-bottom: 20px
 					font-size: 18px
 
@@ -640,11 +645,11 @@
 		p
 			margin: 0 auto 15px
 
-	.footer__btn a
-		width: 200px
+		&__btn a
+			width: 200px
 
-		img
-			display: none
+			img
+				display: none
 
 
 @media only screen and (max-width : 767px)
@@ -738,7 +743,7 @@
 			&__item
 				padding-right: 60px
 
-	h1
+	h1, .title
 		font-size: 40px !important
 
 	.modal
@@ -828,20 +833,20 @@
 				text-align: center
 				padding: 15px
 					
-				h3
+				p
 					margin-bottom: 10px
 
 				br
 					display: none
 
-	h1
+	h1, .title
 		font-size: 36px !important
 		letter-spacing: .2px !important
 
 		br
 			display: none
 
-	h2
+	h2, .client__title
 		font-size: 28px
 
 	input,
@@ -1004,7 +1009,7 @@
 				padding: 15px
 
 
-	h1
+	h1, .title
 		font-size: 32px !important
 
 	h2
@@ -1091,8 +1096,14 @@
 			margin-bottom: 10px
 
 
-	.client h3
-		font-size: 18px
+	.client
+		p
+			font-size: 18px
+
+		&__title
+			p
+				font-size: 26px
+
 
 	.last-news__item
 		width: 100%
